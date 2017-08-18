@@ -16,9 +16,12 @@ If you are reading this and taking the effort to understand these papers, we wou
 <ol>
 <li><a href="#basic-and-algo">Basics and Algorithms</a></li>
 <li><a href="#essentials">Essentials of Relational Databases</a></li>
+<li><a href="#essentials">Query Optimizer</a></li>
+<li><a href="#essentials">Transaction</a></li>
 <li><a href="#system-design">Classic System Design</a></li>
-<li><a href="#column">Columnar Databases</a></li>
+<li><a href="#column">Relational database: Row and Columnar store</a></li>
 <li><a href="#data-parallel">Data-Parallel Computation</a></li>
+<li><a href="#data-parallel">Distributed database</a></li>
 <li><a href="#consensus">Consensus and Consistency</a></li>
 <li><a href="#trends">Trends (Cloud Computing, Warehouse-scale Computing, New Hardware)</a></li>
 <li><a href="#misc">Miscellaneous</a></li>
