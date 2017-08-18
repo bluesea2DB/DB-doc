@@ -16,12 +16,12 @@ If you are reading this and taking the effort to understand these papers, we wou
 <ol>
 <li><a href="#basic-and-algo">Basics and Algorithms</a></li>
 <li><a href="#essentials">Essentials of Relational Databases</a></li>
-<li><a href="#essentials">Query Optimizer</a></li>
-<li><a href="#essentials">Transaction</a></li>
+<li><a href="#querys">Query Optimizer</a></li>
+<li><a href="#transaction">Transaction</a></li>
 <li><a href="#system-design">Classic System Design</a></li>
 <li><a href="#column">Relational database: Row and Columnar store</a></li>
 <li><a href="#data-parallel">Data-Parallel Computation</a></li>
-<li><a href="#data-parallel">Distributed database</a></li>
+<li><a href="#distributed">Distributed database</a></li>
 <li><a href="#consensus">Consensus and Consistency</a></li>
 <li><a href="#trends">Trends (Cloud Computing, Warehouse-scale Computing, New Hardware)</a></li>
 <li><a href="#misc">Miscellaneous</a></li>
@@ -66,6 +66,24 @@ If you are reading this and taking the effort to understand these papers, we wou
 <p><a href="http://www.cs.berkeley.edu/%7Erxin/db-papers/Eddies.pdf">Eddies: Continuously Adaptive Query Processing</a> (2000): Traditional query optimization (and the cost model used) is static. There are two problems with the traditional model. First, it is hard to build the cost model absent of data statistics. Second, query execution environment might change in long running queries and a static approach cannot capture the change. Analogous to fluid dynamics, this paper proposes a set of techniques that optimize query execution dynamically. I don't think ideas in Eddies have made their way into commercial systems yet, but the paper is very refreshing to read and might become more important now.</p>
 </li>
 </ul>
+<h2><a id="user-content--essentials-of-relational-databases" class="anchor" href="#-essentials-of-relational-databases" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a name="user-content-essentials"> Essentials of Relational Databases</a></h2><a name="user-content-essentials">
+</a><ul><a name="user-content-essentials">
+</a><li><a name="user-content-essentials">
+</a><p><a name="user-content-essentials"></a><a href="http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf">Architecture of a Database System</a> (2007): Joe Hellerstein's great overview of relational database systems. This essay walks readers through all components essential to relational database systems.</p>
+</li>
+
+<h2><a id="user-content--essentials-of-relational-databases" class="anchor" href="#-essentials-of-relational-databases" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a name="user-content-essentials">Query Optimization</a></h2><a name="user-content-essentials">
+</a><ul><a name="user-content-essentials">
+</a><li><a name="user-content-essentials">
+</a><p><a name="user-content-essentials"></a><a href="https://e.jd.com/30189587.html">Architecture of a Database System</a>The Art of Database Query Optimizer：Principle and SQL Performance Optimization.</p>
+</li>
+
+<h2><a id="user-content--essentials-of-relational-databases" class="anchor" href="#-essentials-of-relational-databases" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a name="user-content-essentials">Transaction</a></h2><a name="user-content-essentials">
+</a><ul><a name="user-content-essentials">
+</a><li><a name="user-content-essentials">
+</a><p><a name="user-content-essentials"></a><a href="http://dl.acm.org/citation.cfm?id=2168853">A Critique of Snapshot Isolation</a> A new snapshot isolation 'write-snapshot isolation', which has a better concurrency than snapshot isolation.</p>
+</li>
+
 <h2><a id="user-content--classic-system-design" class="anchor" href="#-classic-system-design" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a name="user-content-system-design"> Classic System Design</a></h2><a name="user-content-system-design">
 </a><ul><a name="user-content-system-design">
 </a><li><a name="user-content-system-design">
