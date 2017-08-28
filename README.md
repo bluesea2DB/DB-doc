@@ -85,6 +85,8 @@ If you are reading this and taking the effort to understand these papers, we wou
 </a><ul><a name="user-content-Transaction">
 </a><li><a name="user-content-Transaction">
 </a><p><a name="user-content-Transaction"></a><a href="https://sites.google.com/site/yoavraz2/home/theory-of-commitment-ordering">Theory of Commitment Ordering - Summary</a>: You can understand what is CO, which is a distributed transaction consistency algorithm.</p>
+</li>
+<li>
 </a><p><a name="user-content-Transaction"></a><a href="http://dl.acm.org/citation.cfm?id=2168853">A Critique of Snapshot Isolation</a>: A new snapshot isolation 'write-snapshot isolation', which has a better concurrency than snapshot isolation.</p>
 </li>
 </ul>
