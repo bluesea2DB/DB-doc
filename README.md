@@ -21,7 +21,7 @@ If you are reading this and taking the effort to understand these papers, we wou
 <li><a href="#system-design">Classic System Design</a></li>
 <li><a href="#column">Relational database: Row and Columnar store</a></li>
 <li><a href="#data-parallel">Data-Parallel Computation</a></li>
-<li><a href="#distributed">Distributed database</a></li>
+<li><a href="#Distributed-database">Distributed database</a></li>
 <li><a href="#consensus">Consensus and Consistency</a></li>
 <li><a href="#trends">Trends (Cloud Computing, Warehouse-scale Computing, New Hardware)</a></li>
 <li><a href="#misc">Miscellaneous</a></li>
@@ -78,7 +78,7 @@ If you are reading this and taking the effort to understand these papers, we wou
 <h2><a id="user-content--essentials-of-relational-databases" class="anchor" href="#-essentials-of-relational-databases" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a name="user-content-Query-Optimization"> Query Optimization</a></h2><a name="user-content-Query-Optimization">
 </a><ul><a name="user-content-Query-Optimization">
 </a><li><a name="user-content-Query-Optimization">
-</a><p><a name="user-content-Query-Optimization"></a><a href="https://e.jd.com/30189587.html">The Art of Database Query Optimizer：Principle and SQL Performance Optimization</a>: This book talk about how to implement query optimization for a database, it analyze source codes such as PoatgreSQL，MySQL.</p>
+</a><p><a name="user-content-Query-Optimization"></a><a href="https://e.jd.com/30189587.html">The Art of Database Query Optimizer：Principle and SQL Performance Optimization</a>: This book talks about how to implement query optimization for a database, it analyze source codes such as PoatgreSQL，MySQL.</p>
 </li>
 </ul>
 
@@ -128,10 +128,21 @@ If you are reading this and taking the effort to understand these papers, we wou
 <li>
 <p><a href="https://amplab.cs.berkeley.edu/publication/shark-sql-and-rich-analytics-at-scale/">Shark: SQL and Rich Analytics at Scale</a> (2013): Describes the Shark system, which is the SQL engine built on top of Spark. More importantly, the paper discusses why previous SQL on Hadoop/MapReduce query engines were slow.</p>
 </li>
+
+<h2><a id="user-content--consensus-and-consistency" class="anchor" href="#-consensus-and-consistency" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a name="user-content-consensus"> Distributed database</a></h2><a name="user-content-Distributed-database">
+</a><ul><a name="user-content-Distributed-database">
+</a><li><a name="user-content-Distributed-database">
 <li>
 <p><a href="http://static.googleusercontent.com/media/research.google.com/en//archive/spanner-osdi2012.pdf">Spanner</a> (2012): Spanner is "a scalable, multi-version, globally distributed, and synchronously replicated database". The linchpin that allows all this functionality is the TrueTime API which lets Spanner order events between nodes without having them communicate. <a href="http://www.cse.buffalo.edu/%7Edemirbas/publications/augmentedTime.pdf">There is some speculation that the TrueTime API is very similar to a vector clock but each node has to store less data</a>. Sadly, a paper on TrueTime is promised, but hasn't yet been released.</p>
 </li>
+<li>
+<p><a href="http://static.googleusercontent.com/media/research.google.com/en//archive/spanner-osdi2012.pdf">Spanner: Becoming a SQL System</a> (2017): Spanner proudly announced iteself has been a relation database, which supports SQL, relation mode.</p>
+</li>
+
 </ul>
+
+
+
 <h2><a id="user-content--consensus-and-consistency" class="anchor" href="#-consensus-and-consistency" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a name="user-content-consensus"> Consensus and Consistency</a></h2><a name="user-content-consensus">
 </a><ul><a name="user-content-consensus">
 </a><li><a name="user-content-consensus">
@@ -177,6 +188,7 @@ If you are reading this and taking the effort to understand these papers, we wou
 <p>Friendship link.</p>
 </a><ul><a name="user-content-external">
 </a><li><a name="user-content-external"></a><a href="https://github.com/dbiir">Database & Intelligent Information Retrieval Lab. @ Renmin Univ. of China</a></li>
+</a><li><a name="user-content-external"></a><a href="https://github.com/Tencent/">Tencent Open Source Projectsf，China</a></li>
 </ul>
 
 </article>
